@@ -31,7 +31,6 @@ public class ProdutoController {
 
 	@ApiOperation(value = "Retorna lista de todos clientes cadastrados", response = Iterable.class, tags = "Produto")
 	@GetMapping
-	@ResponseStatus(HttpStatus.FOUND)
 	public ResponseEntity<List<Produto>> getAll() {
 		try {
 			return ResponseEntity.status(HttpStatus.ACCEPTED).body(produtoRepository.findAll());
@@ -42,7 +41,6 @@ public class ProdutoController {
 
 	@ApiOperation(value = "Retorna clientes por id vindo do @PathVariable cadastrados", response = Iterable.class, tags = "Produto")
 	@GetMapping("/{id}")
-	@ResponseStatus(HttpStatus.FOUND)
 	public ResponseEntity<Optional<Produto>> getProdutoId(@PathVariable Long id) {
 		try {
 			return ResponseEntity.status(HttpStatus.ACCEPTED).body( produtoRepository.findById(id));
@@ -84,7 +82,7 @@ public class ProdutoController {
 			return "Deletado com sucesso";
 
 		} catch (Exception e) {
-			return "Não foi encontrado";
+			return "Não foi possicel encontrar o ID";
 		}
 	}
 
