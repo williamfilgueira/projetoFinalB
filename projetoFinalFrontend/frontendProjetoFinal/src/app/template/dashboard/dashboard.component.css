@@ -1,0 +1,8 @@
+.img-fundo{
+    background-image: url('../../../assets/img-projeto-final/img-fundo.png');
+    height: 100%;
+}
+
+h1{
+    background-color: red;
+}

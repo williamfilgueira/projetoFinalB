@@ -1,0 +1,108 @@
+
+
+.img-fundo{
+    background-image: url('../../assets/img-projeto-final/img-fundo.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    object-fit: contain;
+    position: relative;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+   
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: rgba(252, 252, 252, 0.822);
+    height: 450px;
+    width: 550px;
+
+    border-radius: 5px;
+}
+
+.card-contente-area{
+    outline: none;
+    border:none;
+    background-image:none;
+    background-color:transparent;
+}
+
+#login .img-logo{
+    margin-bottom: 50px;
+    
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: rgb(165, 165, 165);
+    
+}
+
+#login .img-logo img{
+    height: 80px;
+    
+}
+
+.card-content-area input{
+    outline: 0;
+    border: none;
+    border-bottom: 1px solid rgb(161, 159, 159);
+
+    font-size: 1.2rem;
+
+    background-color:transparent;
+    margin: 20px;
+    width: 100%;
+}
+
+.card-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.card-footer input{
+    margin-bottom: 30px;
+
+    background-color: #0073AE;
+    color: #fff;
+    border-radius: 5px;
+    
+    height: 30px;
+    width: 170px;
+    
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.card-footer input:hover{
+    background-color: #13587a;
+}
+
+.card-footer a{
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: rgb(43, 84, 146);
+}
+.card-footer a:hover{
+    color: rgb(20, 98, 216);
+    
+}
