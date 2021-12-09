@@ -14,16 +14,18 @@
   
   .header .logo{
     max-height: 30px;
+    margin-right: 25px;
   }
   
   .header .title-group{
       display: flex;
       align-items: center;
-    padding-left: 20px;
+      padding-left: 20px;
   }
   
-  .header .title-group i{
+  .header .title-group a{
     padding-right: 10px;
+    margin-right: 25px;
   }
   
   

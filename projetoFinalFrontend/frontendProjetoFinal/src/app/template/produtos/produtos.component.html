@@ -1,0 +1,18 @@
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Valor</th>
+          </tr>
+        </thead>
+        <tbody >
+          <tr *ngFor="let prod of produtos">
+            <td>{{prod.id}}</td>
+            <td>{{prod.nome}}</td>
+            <td>{{prod.valor | currency: "R$ "}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>

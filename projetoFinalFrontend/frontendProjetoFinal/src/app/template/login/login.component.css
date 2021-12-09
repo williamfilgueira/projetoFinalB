@@ -1,7 +1,6 @@
 
-
 .img-fundo{
-    background-image: url('../../assets/img-projeto-final/img-fundo.png');
+    background-image: url('../../../assets/img-projeto-final/img-fundo.png');
     background-repeat: no-repeat;
     background-size: 100%;
     object-fit: contain;

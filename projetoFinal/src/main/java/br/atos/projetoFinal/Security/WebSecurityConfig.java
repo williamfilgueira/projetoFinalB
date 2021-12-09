@@ -23,7 +23,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		http.cors();
 		http.authorizeRequests()
 		.anyRequest()
-		.authenticated()
+//		.authenticated()
+		.permitAll()
 		.and()
 		.httpBasic()
 		.and()
