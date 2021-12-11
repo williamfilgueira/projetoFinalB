@@ -19,29 +19,57 @@ public class Cliente {
     @Column(nullable = false)
     private String cpf;
 
-    public Long getId() {
-        return id;
-    }
+    @Column(nullable = false)
+    private String email;
+    
+    @Column(nullable = false)
+    private int idade;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public String getNome() {
-        return nome;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+	public String getNome() {
+		return nome;
+	}
 
-    public String getCpf() {
-        return cpf;
-    }
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public int getIdade() {
+		return idade;
+	}
+
+	public void setIdade(int idade) {
+		this.idade = idade;
+	}
+
+
+
+	
+    
+  
 
     
 }

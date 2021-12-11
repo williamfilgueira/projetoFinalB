@@ -1,0 +1,89 @@
+.img-fundo {
+  background-image: url("../../../assets/img-projeto-final/img-criar-conta.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  object-fit: contain;
+  position: relative;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex: 0 1 auto;
+
+  width: 30rem;
+  height: 30rem;
+
+  background-color: rgba(255, 255, 255, 0.897);
+  border-radius: 5px;
+}
+
+.box-usuario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+
+  width: 100%;
+}
+
+.box-usuario h1 {
+  color: rgba(165, 165, 165, 0.849);
+}
+
+.box-usuario a {
+    color: #0073ae;
+    margin-top: 30px;
+    font-size: 0.9  rem;
+}
+
+.box-usuario a:hover {
+    color: #0c5980;
+}
+
+.box-logo {
+  text-align: center;
+  color: #b2b2b2;
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+}
+.logo {
+  height: 80px;
+}
+
+.box-input input {
+  outline: 0;
+  border: none;
+  border-bottom: 1px solid rgb(161, 159, 159);
+
+  font-size: 1.2rem;
+
+  background-color: transparent;
+  margin: 20px;
+  margin-top: 10px;
+}
+
+.box-botao input{
+    width: 200px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 5px;
+    color: #fff ;
+    background-color: #0073ae;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+.box-botao input:hover{
+    background-color: #0b6491;
+}
+
+

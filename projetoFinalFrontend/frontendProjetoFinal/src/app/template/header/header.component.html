@@ -1,18 +1,21 @@
-<mat-toolbar class="header mat-elevation-z4">
-    <span>
-      <a>
-        <img class="logo" src="../../../assets/img-projeto-final/atos-logo-1.png" alt="logo empresa Atos">
-      </a>
-    </span>
+<mat-toolbar *ngIf="mostrarNav" class="header mat-elevation-z4">
+  <span>
+    <a>
+      <img
+        class="logo"
+        src="../../../assets/img-projeto-final/atos-logo-1.png"
+        alt="logo empresa Atos"
+      />
+    </a>
+  </span>
+  <div class="icon">
     <span class="title-group">
       <a routerLink="/dashboard">
-        <i class="material-icons">
-          dashboard
-        </i>
+        <i class="material-icons"> dashboard </i>
         Início
       </a>
-      <a routerLink="/produtos">
-        <mat-icon >shopping_basket</mat-icon>
+      <a class="bag" routerLink="/produtos">
+        <mat-icon> list_alt</mat-icon>
         Produtos
       </a>
       <a routerLink="/clientes">
@@ -20,4 +23,17 @@
         Clientes
       </a>
     </span>
-  </mat-toolbar>
+  </div>
+  <div class="configuracao">
+    <div class="icon">
+      <a routerLink="/configuracao">
+        <mat-icon>settings</mat-icon>
+      </a>
+    </div>
+    <div class="icon">
+      <a routerLink="/logout">
+        <mat-icon>exit_to_app</mat-icon>
+      </a>
+    </div>
+  </div>
+</mat-toolbar>

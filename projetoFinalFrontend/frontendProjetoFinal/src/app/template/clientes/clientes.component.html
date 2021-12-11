@@ -1,0 +1,42 @@
+<div class="box-container">
+  <div class="container">
+    <div class="container-botao">
+      <div class="criar">
+        <a routerLink="#"> Criar </a>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Cpf</th>
+            <th scope="col">Email</th>
+            <th scope="col">Idade</th>
+            <!-- <th scope="col">Endereço</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let client of clientes">
+            <td>{{ client.id }}</td>
+            <td>{{ client.nome }}</td>
+            <td>{{ client.cpf }}</td>
+            <td>{{ client.email }}</td>
+            <td>{{ client.idade }}</td>
+            <td>
+              <div class="botao-excluir">
+                <a routerLink="#"> Excluir</a>
+              </div>
+            </td>
+            <td>
+              <div>
+                <a routerLink="#"
+                  ><mat-icon class="botao-editar">edit</mat-icon></a
+                >
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

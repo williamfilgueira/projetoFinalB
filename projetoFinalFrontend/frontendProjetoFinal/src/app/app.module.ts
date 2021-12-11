@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './template/login/login.component';
@@ -12,6 +13,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { ProdutosComponent } from './template/produtos/produtos.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ClientesComponent } from './template/clientes/clientes.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CriarLoginComponent } from './template/criar-login/criar-login.component';
 
 
 @NgModule({
@@ -22,6 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     DashboardComponent,
     FooterComponent,
     ProdutosComponent,
+    ClientesComponent,
+    CriarLoginComponent,
     
   ],
   imports: [
@@ -29,7 +35,9 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     MatToolbarModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+  
     
   ],
   providers: [],

@@ -1,5 +1,19 @@
-<mat-toolbar class="footer">
-    <span>
-        Desenvoldido por <span class="my-name">William</span>     
-    </span>
+<mat-toolbar *ngIf="mostrarFooter" class="footer">
+  <span> Desenvoldido por <span class="my-name">William</span> </span>
+  <div class="icons git">
+    <a href="https://github.com/williamfilgueira">
+      <img
+        src="../../../assets/img-projeto-final/github.png"
+        alt="link guitHub William"
+      />
+    </a>
+  </div>
+  <div class="icons linkedin">
+    <a href="https://www.linkedin.com/in/william-filgueira-053583123/">
+      <img
+        src="../../../assets/img-projeto-final/linkedin-with-circle.png"
+        alt="link linkedin William"
+      />
+    </a>
+  </div>
 </mat-toolbar>

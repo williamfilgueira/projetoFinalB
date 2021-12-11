@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  mostrarNav : boolean = true;
+
+  constructor(
+
+  ) { }
 
   ngOnInit(): void {
+    window.location.pathname.includes("login")? this.mostrarNav = false : this.mostrarNav = true;
   }
 
 }

@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  mostrarFooter: boolean = true;
+
   constructor() { }
 
   ngOnInit(): void {
+    window.location.pathname.includes("login") ? this.mostrarFooter = false : this.mostrarFooter = true;
+  
   }
 
 }

@@ -1,6 +1,6 @@
 <div class="img-fundo">
   <div id="login">
-    <form class="card">
+    <form [formGroup]="formLogin" class="card">
       <div class="img-logo">
         <img
           src="../../assets/img-projeto-final/atos-logo-1.png"
@@ -10,20 +10,17 @@
       </div>
       <div class="card-content">
         <div class="card-content-area">
-          <input type="text" placeholder="Login" />
+          <input formControlName="nome" type="text" placeholder="Login" />
         </div>
         <div class="card-content-area">
-          <input type="password" placeholder="Password" />
+          <input formControlName="senha" type="password" placeholder="Password" />
         </div>
       </div>
       <div class="card-footer">
-        <input class="botao-login" type="submit" value="Login" class="submit" />
+        <input class="botao-login" type="button" (click)="logar()" value="Login"  />
         <a href="#" class="recuperar_senha">Esqueceu sua senha?</a>
+        <a routerLink="/criarLogin" class="criar-conta">Criar conta</a>
       </div>
     </form>
   </div>
-
-  <!-- <button class="btn btn-success" [routerLink]="['/dashboard']">
-    qualquer nome
-  </button> -->
 </div>

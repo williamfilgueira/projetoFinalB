@@ -1,14 +1,21 @@
 .footer {
-    position: fixed;
-    bottom: 0;
-    font-size: 0.8rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: fixed;
+  bottom: 0;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    height: 30px;
+  height: 40px;
 
-    color: #fff;
-    background-color: #0073AE;
-    box-shadow: 1px 1px 10px rgb(69, 102, 248);
+  color: #fff;
+  background-color: #0073ae;
+  box-shadow: 1px 1px 10px rgb(69, 102, 248);
 }
+
+.icons {
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+}
+

@@ -1,32 +1,41 @@
-.header{
-    display:flex;
-    align-items:center;
-    padding: 5px;
-    background-color: rgb(248, 249, 255);
-    box-shadow: 1px 1px 10px rgb(69, 102, 248);
-  }
-  
-  .header a{
-    display:flex;
-    align-items:center;
-    text-decoration: none;
-  }
-  
-  .header .logo{
-    max-height: 30px;
-    margin-right: 25px;
-  }
-  
-  .header .title-group{
-      display: flex;
-      align-items: center;
-      padding-left: 20px;
-  }
-  
-  .header .title-group a{
-    padding-right: 10px;
-    margin-right: 25px;
-  }
-  
-  
-  
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  background-color: rgb(248, 249, 255);
+  box-shadow: 1px 1px 10px rgb(69, 102, 248);
+}
+
+.header a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header .logo {
+  max-height: 30px;
+  margin-right: 25px;
+}
+
+.header .title-group {
+  display: flex;
+  align-items: center;
+
+  padding-left: 20px;
+}
+
+.header .title-group a {
+  padding-right: 10px;
+  margin-right: 25px;
+}
+
+.configuracao {
+  display: flex;
+}
+.icon {
+  margin: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
