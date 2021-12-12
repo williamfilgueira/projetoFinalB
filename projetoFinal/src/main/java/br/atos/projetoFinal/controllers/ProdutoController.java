@@ -77,14 +77,13 @@ public class ProdutoController {
 	@ApiOperation(value = "Deleta clientes por id vindo do @PathVariable cadastrados", response = Iterable.class, tags = "Produto")
 	@DeleteMapping("/{id}")
 	@ResponseStatus(HttpStatus.ACCEPTED)
-	public String deletarProduto(@PathVariable Long id) {
+	public void deletarProduto(@PathVariable Long id) {
 		try {
 			produtoRepository.deleteById(id);
 			System.out.println("id");
-			return "Deletado com sucesso";
 
 		} catch (Exception e) {
-			return "Não foi possicel encontrar o ID";
+			System.out.println("não foi excluido :(");
 		}
 	}
 

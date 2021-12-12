@@ -28,4 +28,23 @@ export class UsuarioService {
     return this.httpClient.get<Usuario>(`${this.url2}${nome}`);
   }
 
+   // metodo observable para fazer uma requisição na api
+   listarTodosUsuarios(): Observable<Usuario[]> {
+    return this.httpClient.get<Usuario[]>(`${this.url}`);
+  }
+
+  // metodo observable para fazer uma requisição na api para retornar produto por id
+  listarUsuarioId(id: number): Observable<Usuario> {
+    return this.httpClient.get<Usuario>(`${this.url}/${id}`);
+  }
+
+  atualizarUsuario(usuario: Usuario) {
+    return this.httpClient.put<Usuario>(`${this.url}/${usuario.id}`, usuario);
+  }
+
+  // metodo observable para fazer uma requisição na api para retornar produto por id
+  deletarUsuarioId(id: number): Observable<Usuario> {
+    return this.httpClient.delete<Usuario>(`${this.url}/${id}`);
+  }
+
 }

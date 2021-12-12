@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
+import { Usuario } from 'src/app/models/usuario';
 
 @Component({
   selector: 'app-header',
@@ -9,13 +10,20 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   mostrarNav : boolean = true;
-
+  usuario: Usuario = new Usuario();
   constructor(
-
+   private router: Router
   ) { }
 
   ngOnInit(): void {
     window.location.pathname.includes("login")? this.mostrarNav = false : this.mostrarNav = true;
+    this.usuario = JSON.parse(localStorage.getItem("usuario")!)
   }
+
+  logout(): void{
+    localStorage.removeItem("usuario"),
+    this.router.navigate(["/login"])
+  }
+
 
 }

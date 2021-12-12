@@ -39,3 +39,8 @@
   justify-content: flex-end;
 }
 
+.icon a:hover{
+  cursor: pointer;
+  color:rgb(69, 102, 248);
+}
+

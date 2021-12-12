@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ClientesComponent } from './template/clientes/clientes.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CriarLoginComponent } from './template/criar-login/criar-login.component';
+import { LiveFormDialogComponent } from './views/excluir/live-form-dialog/live-form-dialog.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -28,6 +31,7 @@ import { CriarLoginComponent } from './template/criar-login/criar-login.componen
     ProdutosComponent,
     ClientesComponent,
     CriarLoginComponent,
+    LiveFormDialogComponent,
     
   ],
   imports: [
@@ -37,10 +41,14 @@ import { CriarLoginComponent } from './template/criar-login/criar-login.componen
     MatIconModule,
     HttpClientModule,
     ReactiveFormsModule,
+    MatDialogModule,
+    BrowserAnimationsModule
   
     
   ],
-  providers: [],
+  providers: [
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

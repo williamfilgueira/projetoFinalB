@@ -19,9 +19,18 @@ export class ProdutosService {
   }
 
   // metodo observable para fazer uma requisição na api para retornar produto por id
-  listarTodosProdutosId(id: number): Observable<Produto> {
+  listarProdutoId(id: number): Observable<Produto> {
     return this.httpClient.get<Produto>(`${this.url}/${id}`);
   }
+
+  criarProduto(produto: Produto) {
+    return this.httpClient.post<Produto>(`${this.url}`, produto);
+  }
+
+  atualizarProduto(produto: Produto) {
+    return this.httpClient.put<Produto>(`${this.url}/${produto.id}`, produto);
+  }
+
   // metodo observable para fazer uma requisição na api para retornar produto por id
   deletarProdutoId(id: number): Observable<Produto> {
     return this.httpClient.delete<Produto>(`${this.url}/${id}`);

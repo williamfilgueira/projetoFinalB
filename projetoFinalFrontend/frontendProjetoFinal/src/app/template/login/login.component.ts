@@ -2,6 +2,7 @@ import { HttpParams } from "@angular/common/http";
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { Router } from "@angular/router";
+import { Usuario } from "src/app/models/usuario";
 import { UsuarioService } from "src/app/service/usuario.service";
 
 @Component({
@@ -11,6 +12,8 @@ import { UsuarioService } from "src/app/service/usuario.service";
 })
 export class LoginComponent implements OnInit {
   formLogin: FormGroup;
+  usuario: Usuario = new Usuario();
+
 
   constructor(
     private formB: FormBuilder,
@@ -32,13 +35,22 @@ export class LoginComponent implements OnInit {
         next: (nomeUsuario) => {
           let params = new HttpParams().set("nome", this.formLogin.value.nome);
           this.userService.filtrarUsuario(params.toString()).subscribe({
-            next: (usuario) => this.router.navigate(["/dashboard"]).then(()=>{
-              window.location.reload()
-            }),
-            error: (err) => console.log("não é essa senha seu burro"),
+            next: (usuario) =>{
+              this.router.navigate(["/dashboard"]).then(()=>{
+                window.location.reload()
+              });
+              localStorage.setItem("usuario", JSON.stringify(usuario));
+              this.usuario = JSON.parse(localStorage.getItem("usuario")!)
+            },
+            error: (err) => console.log("senha errada"),
           });
         },
         error: (err) => console.log("erro na permição"),
       });
   }
+
+  // 
+
+
+
 }

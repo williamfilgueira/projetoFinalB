@@ -1,3 +1,4 @@
+<app-header></app-header>
 <div class="box-container">
   <div class="container">
     <div class="container-botao">
@@ -20,12 +21,12 @@
           <td>{{ prod.valor | currency: "R$ " }}</td>
           <td>
             <div class="botao-excluir">
-              <a routerLink="#"> Excluir</a>
+              <a (click)="abrirModalExcluir()"> Excluir</a>
             </div>
           </td>
           <td>
             <div>
-              <a routerLink="#"><mat-icon class="botao-editar">edit</mat-icon></a>
+              <a ><mat-icon class="botao-editar">edit</mat-icon></a>
             </div>
           </td>
         </tr>
@@ -33,3 +34,4 @@
     </table>
   </div>
 </div>
+<app-footer></app-footer>

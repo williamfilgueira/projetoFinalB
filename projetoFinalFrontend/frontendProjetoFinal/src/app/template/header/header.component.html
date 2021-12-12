@@ -30,8 +30,8 @@
         <mat-icon>settings</mat-icon>
       </a>
     </div>
-    <div class="icon">
-      <a routerLink="/logout">
+    <div *ngIf="usuario" class="icon">
+      <a (click)="logout()">
         <mat-icon>exit_to_app</mat-icon>
       </a>
     </div>
