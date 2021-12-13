@@ -1,0 +1,49 @@
+<app-header></app-header>
+
+
+<div class="container">
+    <div class="box-produto">
+      <form [formGroup]="formularioCliente" class="formulario" >
+        <div class="legenda">
+          <h3>Cliente</h3>
+        </div>
+        <div class="box-input">
+          <div class="input">
+            <input
+              formControlName="nome"
+              name="valor"
+              type="text"
+              placeholder="Nome"
+            />
+          </div>
+          <div class="input">
+            <input
+              formControlName="cpf"
+              name="cpf"
+              type="text"
+              placeholder="Cpf"
+            />
+          </div>
+          <div class="input">
+            <input
+              formControlName="email"
+              name="email"
+              type="email"
+              placeholder="email"
+            />
+          </div>
+          <div class="input">
+            <input
+              formControlName="idade"
+              name="idade"
+              type="number"
+              placeholder="Idade"
+            />
+          </div>
+        </div>
+        <button (click)="cadastrarCliente()" class="btn-enviar">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+<app-footer></app-footer>

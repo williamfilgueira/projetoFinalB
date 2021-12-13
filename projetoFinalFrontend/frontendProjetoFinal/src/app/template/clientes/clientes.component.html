@@ -3,7 +3,7 @@
   <div class="container">
     <div class="container-botao">
       <div class="criar">
-        <a routerLink="#"> Criar </a>
+        <a routerLink="/criarCliente"> Criar </a>
       </div>
       <table class="table">
         <thead>
@@ -24,14 +24,14 @@
             <td>{{ client.email }}</td>
             <td>{{ client.idade }}</td>
             <td>
-              <div class="botao-excluir">
-                <a routerLink="#"> Excluir</a>
+              <div >
+                <a class="botao-excluir btn" (click)="deletarClienteId(client.id)"> Excluir</a>
               </div>
             </td>
             <td>
               <div>
-                <a routerLink="#"
-                  ><mat-icon class="botao-editar">edit</mat-icon></a
+                <a (click)="atualizarCliente(client.id)"
+                  ><mat-icon class="botao-editar btn">edit</mat-icon></a
                 >
               </div>
             </td>

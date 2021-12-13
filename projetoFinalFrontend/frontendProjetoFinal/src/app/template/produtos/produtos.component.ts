@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from "@angular/core";
 import { MatDialog } from "@angular/material/dialog";
 import { take } from "rxjs";
@@ -16,12 +17,14 @@ export class ProdutosComponent implements OnInit {
   // instanciando o servico de produtos
   constructor(
     private produtosService: ProdutosService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private router: Router
   ) {}
 
   // toda vez que carregar o modulo o ngOniInit irar carrear a função encontrarTodosProdutos
   ngOnInit(): void {
     this.encontrarTodosProdutos();
+    
   }
 
   // criando metodo para listar produtos da API
@@ -43,6 +46,17 @@ export class ProdutosComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
     });
+  }
+
+  criarProduto(produto:Produto){
+    this.produtosService.criarProduto(produto).subscribe({
+      next: value => this.criarProduto(produto),
+      error: erro => console.log("erro")
+    })
+  }
+
+  atualizarProduto(id:number){
+    this.router.navigate(["/criarProduto",id])
   }
 
   deletarProdutoId(id: number): void{

@@ -1,3 +1,5 @@
+import { CriarClienteComponent } from './template/clientes/criar-cliente/criar-cliente.component';
+import { CriarProdutosComponent } from './template/produtos/criar-produtos/criar-produtos.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ClientesComponent } from './template/clientes/clientes.component';
@@ -33,6 +35,24 @@ const routes: Routes = [{
 {
   path: 'criarLogin',
   component: CriarLoginComponent
+}
+,
+{
+  path: 'criarProduto',
+  component: CriarProdutosComponent
+}
+,
+{
+  path: 'criarProduto/:id',
+  component: CriarProdutosComponent
+},
+{
+  path: 'criarCliente',
+  component: CriarClienteComponent
+},
+{
+  path: 'criarCliente/:id',
+  component: CriarClienteComponent
 }
 ]
 

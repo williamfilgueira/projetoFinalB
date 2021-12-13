@@ -3,7 +3,7 @@
   <div class="container">
     <div class="container-botao">
       <div class="criar">
-        <a routerLink="#"> Criar </a>
+        <a routerLink="/criarProduto"> Criar </a>
       </div>
     </div>
     <table class="table">
@@ -21,12 +21,12 @@
           <td>{{ prod.valor | currency: "R$ " }}</td>
           <td>
             <div class="botao-excluir">
-              <a (click)="abrirModalExcluir()"> Excluir</a>
+              <a (click)="deletarProdutoId(prod.id)"> Excluir</a>
             </div>
           </td>
           <td>
             <div>
-              <a ><mat-icon class="botao-editar">edit</mat-icon></a>
+              <a  (click)="atualizarProduto(prod.id)"><mat-icon class="botao-editar btn">edit</mat-icon></a>
             </div>
           </td>
         </tr>

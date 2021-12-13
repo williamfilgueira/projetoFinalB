@@ -19,6 +19,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CriarLoginComponent } from './template/criar-login/criar-login.component';
 import { LiveFormDialogComponent } from './views/excluir/live-form-dialog/live-form-dialog.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CriarProdutosComponent } from './template/produtos/criar-produtos/criar-produtos.component';
+import { CriarClienteComponent } from './template/clientes/criar-cliente/criar-cliente.component';
 
 
 @NgModule({
@@ -32,6 +34,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ClientesComponent,
     CriarLoginComponent,
     LiveFormDialogComponent,
+    CriarProdutosComponent,
+    CriarClienteComponent,
     
   ],
   imports: [
