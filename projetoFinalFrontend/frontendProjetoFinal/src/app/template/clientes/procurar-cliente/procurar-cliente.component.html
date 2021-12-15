@@ -1,0 +1,18 @@
+<div class="container">
+  <form [formGroup]="procurarCliente">
+    <div class="col-sm-10">
+      <select
+        class="form-control"
+        aria-label="Default select example"
+        formControlName="cliente"
+        (change)="ngOnChange(procurarCliente.value.cliente)"
+        >
+        <option value="null" disabled selected>Selecione um Cliente</option>
+        <option *ngFor="let cliente of clientes" [ngValue]="cliente">
+          {{ cliente.nome }}
+        </option>
+      </select>
+    </div>
+    <button (click)="filtrarCliente()"><mat-icon>search</mat-icon></button>
+  </form>
+</div>

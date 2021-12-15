@@ -1,5 +1,5 @@
 import { ClientesService } from 'src/app/service/clientes.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { EnderecoService } from './../../service/endereco.service';
 import { FormBuilder } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
@@ -21,7 +21,8 @@ export class EnderecoComponent implements OnInit {
     private fb:FormBuilder,
     private enderecoService : EnderecoService,
     private clienteService : ClientesService,
-    private activatedRoute : ActivatedRoute
+    private activatedRoute : ActivatedRoute,
+    private router: Router
 
   ) { }
 
@@ -66,8 +67,11 @@ export class EnderecoComponent implements OnInit {
   teste(){
     console.log(this.formularioEndereco.value)
     this.enderecoService.criarEndereco(this.formularioEndereco.value).subscribe({
-      next: ende => console.log("Cadastrado com sucesso", ende),
-      error : err => console.log(err)
+      next: ende => {
+        alert("Cliente cadastrado com sucesso!")
+        this.router.navigate(["/clientes"])
+      },
+      error : err => alert("Preencha todos os campos")
     })
     
   }

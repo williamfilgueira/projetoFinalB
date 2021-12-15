@@ -23,6 +23,8 @@ import { CriarProdutosComponent } from './template/produtos/criar-produtos/criar
 import { CriarClienteComponent } from './template/clientes/criar-cliente/criar-cliente.component';
 import { EnderecoComponent } from './template/endereco/endereco.component';
 import { ProcurarProdutoComponent } from './template/produtos/procurar-produto/procurar-produto.component';
+import { ProcurarClienteComponent } from './template/clientes/procurar-cliente/procurar-cliente.component';
+import { CarrosselComponent } from './template/dashboard/carrossel/carrossel.component';
 
 
 @NgModule({
@@ -40,6 +42,8 @@ import { ProcurarProdutoComponent } from './template/produtos/procurar-produto/p
     CriarClienteComponent,
     EnderecoComponent,
     ProcurarProdutoComponent,
+    ProcurarClienteComponent,
+    CarrosselComponent,
     
   ],
   imports: [

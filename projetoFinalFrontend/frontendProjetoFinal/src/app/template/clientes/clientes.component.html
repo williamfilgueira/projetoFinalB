@@ -1,44 +1,53 @@
 <app-header></app-header>
-<div class="box-container">
-  <div class="container">
-    <div routerLink="/criarCliente" class="criar">
-      <a><mat-icon>add_circle</mat-icon> </a>
+<div class="img-fundo">
+  <div class="box-container">
+    <div class="container">
+      <div class="box-pesquisar">
+        <app-procurar-cliente (pesquisarCliente)="pesquisarCliente($event)"
+          >pesquisar</app-procurar-cliente
+        >
+      </div>
+      <div class="container-botao">
+        <div routerLink="/criarCliente" class="criar">
+          <a><mat-icon>add_circle</mat-icon> </a>
+        </div>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Cpf</th>
+            <th scope="col">Email</th>
+            <th scope="col">Idade</th>
+            <!-- <th scope="col">Endereço</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let client of cliente">
+            <td>{{ client.id }}</td>
+            <td>{{ client.nome }}</td>
+            <td>{{ client.cpf }}</td>
+            <td>{{ client.email }}</td>
+            <td>{{ client.idade }}</td>
+            <td>
+              <div class="botao-excluir">
+                <a (click)="deletarClienteId(client.id)">
+                  <mat-icon>delete_forever</mat-icon></a
+                >
+              </div>
+            </td>
+            <td>
+              <div class="botao-editar">
+                <a (click)="atualizarCliente(client.id)"
+                  ><mat-icon>settings_applications</mat-icon></a
+                >
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">Id</th>
-          <th scope="col">Nome</th>
-          <th scope="col">Cpf</th>
-          <th scope="col">Email</th>
-          <th scope="col">Idade</th>
-          <!-- <th scope="col">Endereço</th> -->
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let cliente of clientes">
-          <td>{{ cliente.id }}</td>
-          <td>{{ cliente.nome }}</td>
-          <td>{{ cliente.cpf }}</td>
-          <td>{{ cliente.email }}</td>
-          <td>{{ cliente.idade }}</td>
-          <td>
-            <div class="botao-excluir">
-              <a (click)="deletarClienteId(cliente.id)">
-                <mat-icon>delete_forever</mat-icon></a
-              >
-            </div>
-          </td>
-          <td>
-            <div class="botao-editar">
-              <a (click)="atualizarCliente(cliente.id)"
-                ><mat-icon>settings_applications</mat-icon></a
-              >
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </div>
 </div>
 <app-footer></app-footer>

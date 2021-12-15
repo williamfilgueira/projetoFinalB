@@ -1,40 +1,48 @@
 <app-header></app-header>
-<div class="box-container">
-  <div class="container">
-    <div class="box-pesquisar">
-        <app-procurar-produto (pesquisarProduto)="pesquisarProduto($event)">pesquisar</app-procurar-produto>
-    </div>
-    <div class="container-botao">
-      <div routerLink="/criarProduto" class="criar">
-        <a ><mat-icon>add_circle</mat-icon>  </a>
+<div class="img-fundo">
+  <div class="box-container">
+    <div class="container">
+      <div class="box-pesquisar">
+        <app-procurar-produto (pesquisarProduto)="pesquisarProduto($event)"
+          >pesquisar</app-procurar-produto
+        >
       </div>
+      <div class="container-botao">
+        <div routerLink="/criarProduto" class="criar">
+          <a><mat-icon>add_circle</mat-icon> </a>
+        </div>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Valor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let prod of produtos">
+            <td>{{ prod.id }}</td>
+            <td>{{ prod.nome }}</td>
+            <td>{{ prod.valor | currency: "R$ " }}</td>
+            <td>
+              <div class="botao-excluir">
+                <a (click)="deletarProdutoId(prod.id)">
+                  <mat-icon>delete_forever</mat-icon></a
+                >
+              </div>
+            </td>
+            <td>
+              <div class="botao-editar">
+                <a (click)="atualizarProduto(prod.id)"
+                  ><mat-icon>settings_applications</mat-icon></a
+                >
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">Id</th>
-          <th scope="col">Nome</th>
-          <th scope="col">Valor</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let prod of produtos">
-          <td>{{ prod.id }}</td>
-          <td>{{ prod.nome }}</td>
-          <td>{{ prod.valor | currency: "R$ " }}</td>
-          <td>
-            <div class="botao-excluir">
-              <a (click)="deletarProdutoId(prod.id)"> <mat-icon>delete_forever</mat-icon></a>
-            </div>
-          </td>
-          <td>
-            <div class="botao-editar">
-              <a  (click)="atualizarProduto(prod.id)"><mat-icon>settings_applications</mat-icon></a>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </div>
 </div>
 <app-footer></app-footer>

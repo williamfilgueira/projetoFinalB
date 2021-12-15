@@ -10,7 +10,7 @@ import { ClientesService } from "src/app/service/clientes.service";
   styleUrls: ["./clientes.component.css"],
 })
 export class ClientesComponent implements OnInit {
-  clientes: Cliente[] = [];
+  cliente: Cliente[] = [];
 
   constructor(
     private clientesService: ClientesService,
@@ -26,7 +26,7 @@ export class ClientesComponent implements OnInit {
       .listarTodosClientes()
       .pipe(take(1))
       .subscribe({
-        next: (client) => (this.clientes = client),
+        next: (client) => (this.cliente = client),
         error: (error) => console.log(error),
       });
   }
@@ -49,7 +49,10 @@ export class ClientesComponent implements OnInit {
     });
   }
 
-  teste(){
-    console.log("testando")
+  pesquisarCliente(e : any){
+    this.clientesService.listarTodosClientes().subscribe({
+      next : prod => this.cliente = prod.filter((p)=> p.id == e),
+      error : err => console.log(err)
+    })
   }
 }

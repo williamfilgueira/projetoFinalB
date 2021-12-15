@@ -1,13 +1,27 @@
-.box-container {
+.img-fundo {
+  background-image: linear-gradient(#05537a, #fff);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  object-fit: contain;
+  position: relative;
   height: 100vh;
 }
 
+.box-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
 .container {
+  background-color: #fff;
   flex-wrap: wrap;
   margin-top: 30px;
   border: 1px solid #67b1d6b6;
   border-radius: 5px;
   box-shadow: 1px 1px 10px silver;
+  max-height: 100%;
+
 }
 
 .container-botao {

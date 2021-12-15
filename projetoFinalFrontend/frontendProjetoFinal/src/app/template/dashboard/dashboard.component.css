@@ -1,4 +1,28 @@
+.img-fundo {
+  background-image: linear-gradient(#05537a, #fff);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  object-fit: contain;
+  position: relative;
+  height: 100vh;
+}
 
-.container{
-    height: 100vh;
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  max-width: 600px;
+}
+
+video {
+}
+
+.box-carrossel {
+  display: flex;
+  align-items: initial;
+  justify-content: center;
+  background-color: black;
+  border-radius: 15px;
+  margin-top: 20px;
 }
