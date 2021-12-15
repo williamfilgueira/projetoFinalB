@@ -1,6 +1,9 @@
 <app-header></app-header>
 <div class="box-container">
   <div class="container">
+    <div class="box-pesquisar">
+        <app-procurar-produto (pesquisarProduto)="pesquisarProduto($event)">pesquisar</app-procurar-produto>
+    </div>
     <div class="container-botao">
       <div routerLink="/criarProduto" class="criar">
         <a ><mat-icon>add_circle</mat-icon>  </a>

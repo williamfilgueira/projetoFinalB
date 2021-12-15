@@ -65,5 +65,12 @@ export class ProdutosComponent implements OnInit {
       error: erro => console.log("deu BO")
     })
   }
+
+  pesquisarProduto(e : any){
+    this.produtosService.listarTodosProdutos().subscribe({
+      next : prod => this.produtos = prod.filter((p)=> p.id == e),
+      error : err => console.log(err)
+    })
+  }
 }
 

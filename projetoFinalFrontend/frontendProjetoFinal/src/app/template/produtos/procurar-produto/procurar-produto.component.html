@@ -1,0 +1,19 @@
+<div class="container">
+    <form [formGroup]="cadastro">
+  <label class="col-sm-2 col-form-label">Fabricante</label>
+  <div class="col-sm-10">
+    <select
+      class="form-control"
+      aria-label="Default select example"
+      formControlName="produto"
+      (change)="ngOnChange(cadastro.value.produto)"
+    >
+      <option value="null" disabled selected>Selecione um Produto</option>
+      <option *ngFor="let prod of produto" [ngValue]="prod">
+        {{ prod.nome }}
+      </option>
+    </select>
+  </div>
+  <button (click)=" filtrarProduto()">Pesquisar</button>
+</form>
+</div>

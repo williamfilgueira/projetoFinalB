@@ -22,7 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CriarProdutosComponent } from './template/produtos/criar-produtos/criar-produtos.component';
 import { CriarClienteComponent } from './template/clientes/criar-cliente/criar-cliente.component';
 import { EnderecoComponent } from './template/endereco/endereco.component';
-import { ComponentePesquisarComponent } from './template/dashboard/componente-pesquisar/componente-pesquisar.component';
+import { ProcurarProdutoComponent } from './template/produtos/procurar-produto/procurar-produto.component';
 
 
 @NgModule({
@@ -39,7 +39,7 @@ import { ComponentePesquisarComponent } from './template/dashboard/componente-pe
     CriarProdutosComponent,
     CriarClienteComponent,
     EnderecoComponent,
-    ComponentePesquisarComponent,
+    ProcurarProdutoComponent,
     
   ],
   imports: [
