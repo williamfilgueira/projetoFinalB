@@ -23,17 +23,17 @@
         Clientes
       </a>
     </span>
-  </div>
-  <div class="configuracao">
-    <div class="icon">
-      <a routerLink="/configuracao">
-        <mat-icon>settings</mat-icon>
-      </a>
-    </div>
-    <div *ngIf="usuario" class="icon">
-      <a (click)="logout()">
-        <mat-icon>exit_to_app</mat-icon>
-      </a>
+    <div class="configuracao">
+      <div class="icon">
+        <a routerLink="/configuracao">
+          <mat-icon>settings</mat-icon>
+        </a>
+      </div>
+      <div *ngIf="usuario" class="icon">
+        <a (click)="logout()">
+          <mat-icon>exit_to_app</mat-icon>
+        </a>
+      </div>
     </div>
   </div>
 </mat-toolbar>

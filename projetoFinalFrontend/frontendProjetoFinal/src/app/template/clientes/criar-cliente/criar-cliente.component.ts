@@ -1,7 +1,8 @@
+import { EnderecoComponent } from './../../endereco/endereco.component';
 import { ClientesService } from 'src/app/service/clientes.service';
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewChild } from "@angular/core";
 import { FormBuilder, FormGroup } from "@angular/forms";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { Cliente } from 'src/app/models/cliente';
 
 @Component({
@@ -11,13 +12,18 @@ import { Cliente } from 'src/app/models/cliente';
 })
 export class CriarClienteComponent implements OnInit {
   
+@ViewChild(EnderecoComponent) child: EnderecoComponent;
+
+
+
   formularioCliente: FormGroup;
   id: number;
 
   constructor(
     private fb: FormBuilder, 
     private activeRouter: ActivatedRoute,
-    private clientesService: ClientesService
+    private clientesService: ClientesService,
+    private router : Router
   ) {}
 
   ngOnInit(): void {
@@ -56,8 +62,16 @@ export class CriarClienteComponent implements OnInit {
 
   cadastrarCliente() {
     this.clientesService.criarCliente(this.formularioCliente.value).subscribe({
-      next: (cadastrado) => console.log("cadastrado"),
+      next: (cadastrado) => {
+        console.log("cadastrado", cadastrado.id);
+        this.router.navigate(["/endereco", cadastrado.id])
+      },
       error: (erro) => console.log("errouuu"),
     });
+    
+  }
+
+  salvarEndereco(){
+
   }
 }

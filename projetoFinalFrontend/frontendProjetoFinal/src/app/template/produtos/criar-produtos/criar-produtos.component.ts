@@ -2,7 +2,7 @@ import { ProdutosService } from "src/app/service/produtos.service";
 import { FormBuilder } from "@angular/forms";
 import { Component, OnInit } from "@angular/core";
 import { FormGroup } from "@angular/forms";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { Produto } from "src/app/models/produto";
 
 @Component({
@@ -17,7 +17,8 @@ export class CriarProdutosComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private produtosService: ProdutosService,
-    private activeRouter: ActivatedRoute
+    private activeRouter: ActivatedRoute,
+    private router : Router
   ) {}
 
   ngOnInit(): void {
@@ -51,7 +52,10 @@ export class CriarProdutosComponent implements OnInit {
 
   cadastrarProduto() {
     this.produtosService.criarProduto(this.formularioProduto.value).subscribe({
-      next: (cadastrado) => console.log("cadastrado"),
+      next: (cadastrado) => {
+        alert("Produto cadastrado!");
+        this.router.navigate(["/produtos"])
+      },
       error: (erro) => console.log("errouuu"),
     });
   }

@@ -1,32 +1,35 @@
 <app-header></app-header>
-
-<div class="container">
-  <div class="box-produto">
-    <form [formGroup]="formularioProduto" class="formulario" >
-      <div class="legenda">
-        <h3>Produto</h3>
-      </div>
-      <div class="box-input">
-        <div class="input">
-          <input
-            formControlName="nome"
-            name="valor"
-            type="text"
-            placeholder="Nome"
-          />
+<div class="img-fundo">
+  <div class="container">
+    <div class="box-produto">
+      <form [formGroup]="formularioProduto" class="formulario">
+        <div class="legenda">
+          <h3>Produto</h3>
         </div>
-        <div class="input">
-          <input
-            formControlName="valor"
-            name="valor"
-            type="number"
-            placeholder="Valor"
-          />
+        <div class="box-input">
+          <div class="input">
+            <input
+              formControlName="nome"
+              name="valor"
+              type="text"
+              placeholder="Nome"
+            />
+          </div>
+          <div class="input">
+            <input
+              formControlName="valor"
+              name="valor"
+              type="number"
+              placeholder="Valor"
+            />
+          </div>
         </div>
+        <button (click)="cadastrarProduto()" class="btn-enviar">Enviar</button>
+      </form>
+      <div class="box-link">
+        <a routerLink="/produtos">Voltar</a>
       </div>
-      <button (click)="cadastrarProduto()" class="btn-enviar">Enviar</button>
-    </form>
+    </div>
   </div>
 </div>
-
 <app-footer></app-footer>

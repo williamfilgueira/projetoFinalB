@@ -1,19 +1,56 @@
-
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 100%;
+.img-fundo {
+  background-image: linear-gradient(#05537a, #fff);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  object-fit: contain;
+  position: relative;
+  height: 100vh;
 }
 
-.box-produto{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border: 1px solid silver;
+.container {
+  flex-wrap: wrap;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-.formulario{
+.box-produto {
+  margin-top: 100px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.legenda{
+    margin: 10px 0 30px 0;
+}
+
+.input input{
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid silver;
+}
+
+.btn-enviar {
+    background-color: #05537a;
+    color: #fff;
+    width: 100px;
+    margin: 40px 0 20px 0;
+    border-radius: 5px;
+}
+.btn-enviar:hover {
+    background-color: #1f739c;
+    color: #fff;
+    width: 100px;
+    margin: 40px 0 20px 0;
+    border-radius: 5px;
+}
+
+.box-link{
+    color: silver;
 }

@@ -1,3 +1,4 @@
+import { EnderecoComponent } from './template/endereco/endereco.component';
 import { CriarClienteComponent } from './template/clientes/criar-cliente/criar-cliente.component';
 import { CriarProdutosComponent } from './template/produtos/criar-produtos/criar-produtos.component';
 import { NgModule } from '@angular/core';
@@ -32,6 +33,15 @@ const routes: Routes = [{
   component: ClientesComponent
 }
 ,
+{
+  path: 'endereco',
+  component: EnderecoComponent
+},
+{
+  path: 'endereco/:id',
+  component: EnderecoComponent
+},
+
 {
   path: 'criarLogin',
   component: CriarLoginComponent

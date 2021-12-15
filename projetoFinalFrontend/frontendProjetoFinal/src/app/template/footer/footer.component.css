@@ -1,7 +1,7 @@
 .footer {
   position: fixed;
   bottom: 0;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,9 +13,14 @@
   box-shadow: 1px 1px 10px rgb(69, 102, 248);
 }
 
-.icons {
-  margin-left: 15px;
+.icons  {
+  margin-left: 10px;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.git{
+  height: 23px;
 }
 

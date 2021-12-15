@@ -1,0 +1,53 @@
+<app-header></app-header>
+<div class="box-produto">
+    <form [formGroup]="formularioEndereco" class="formulario">
+      <div class="legenda">
+        <h3>Endereço</h3>
+      </div>
+      <div class="box-input">
+        <div class="input">
+          <input
+            formControlName="cep"
+            name="cep"
+            type="text"
+            placeholder="Cep"
+          />
+        </div>
+        <div class="input">
+          <input
+            formControlName="rua"
+            name="rua"
+            type="text"
+            placeholder="Rua"
+          />
+        </div>
+        <div class="input">
+          <input
+            formControlName="numero"
+            name="numero"
+            type="number"
+            placeholder="N°"
+          />
+        </div>
+        <div class="input">
+          <input
+            formControlName="bairro"
+            name="bairro"
+            type="text"
+            placeholder="Bairro"
+          />
+        </div>
+        <div class="input">
+          <input
+            formControlName="complemento"
+            name="complemento"
+            type="text"
+            placeholder="Complemento"
+          />
+        </div>
+        
+      </div>
+    </form>
+  </div>
+  <button (click)="teste()">catapimbas</button>
+<app-footer></app-footer>

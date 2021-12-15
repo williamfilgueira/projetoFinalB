@@ -21,6 +21,8 @@ import { LiveFormDialogComponent } from './views/excluir/live-form-dialog/live-f
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CriarProdutosComponent } from './template/produtos/criar-produtos/criar-produtos.component';
 import { CriarClienteComponent } from './template/clientes/criar-cliente/criar-cliente.component';
+import { EnderecoComponent } from './template/endereco/endereco.component';
+import { ComponentePesquisarComponent } from './template/dashboard/componente-pesquisar/componente-pesquisar.component';
 
 
 @NgModule({
@@ -36,6 +38,8 @@ import { CriarClienteComponent } from './template/clientes/criar-cliente/criar-c
     LiveFormDialogComponent,
     CriarProdutosComponent,
     CriarClienteComponent,
+    EnderecoComponent,
+    ComponentePesquisarComponent,
     
   ],
   imports: [

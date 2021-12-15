@@ -2,8 +2,8 @@
 <div class="box-container">
   <div class="container">
     <div class="container-botao">
-      <div class="criar">
-        <a routerLink="/criarProduto"> Criar </a>
+      <div routerLink="/criarProduto" class="criar">
+        <a ><mat-icon>add_circle</mat-icon>  </a>
       </div>
     </div>
     <table class="table">
@@ -21,12 +21,12 @@
           <td>{{ prod.valor | currency: "R$ " }}</td>
           <td>
             <div class="botao-excluir">
-              <a (click)="deletarProdutoId(prod.id)"> Excluir</a>
+              <a (click)="deletarProdutoId(prod.id)"> <mat-icon>delete_forever</mat-icon></a>
             </div>
           </td>
           <td>
-            <div>
-              <a  (click)="atualizarProduto(prod.id)"><mat-icon class="botao-editar btn">edit</mat-icon></a>
+            <div class="botao-editar">
+              <a  (click)="atualizarProduto(prod.id)"><mat-icon>settings_applications</mat-icon></a>
             </div>
           </td>
         </tr>
