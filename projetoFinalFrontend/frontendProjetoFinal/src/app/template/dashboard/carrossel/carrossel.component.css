@@ -1,0 +1,35 @@
+.bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  background: url("../../../../assets/video-atos.mp4") no-repeat;
+  background-size: cover;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.title {
+  font-size: 2rem;
+  text-align: end;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgb(74, 169, 247);
+  margin: 0;
+}
+
+.title p{
+    border-bottom: 1px solid white;
+}
+
+
+
+.img img {
+  width: 500px;
+}
+
