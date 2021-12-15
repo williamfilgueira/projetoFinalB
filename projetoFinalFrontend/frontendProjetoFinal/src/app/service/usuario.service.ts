@@ -38,6 +38,10 @@ export class UsuarioService {
     return this.httpClient.get<Usuario>(`${this.url}/${id}`);
   }
 
+  criarUsuario(usuario: Usuario) {
+    return this.httpClient.post<Usuario>(`${this.url}`, usuario);
+  }
+
   atualizarUsuario(usuario: Usuario) {
     return this.httpClient.put<Usuario>(`${this.url}/${usuario.id}`, usuario);
   }

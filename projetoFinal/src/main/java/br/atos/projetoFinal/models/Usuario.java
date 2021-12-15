@@ -2,6 +2,7 @@ package br.atos.projetoFinal.models;
 
 import java.util.Collection;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,17 +11,30 @@ import javax.persistence.Id;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-
 @Entity
 public class Usuario implements UserDetails {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+
+	@Column(nullable = false)
+	private String nome; 
 	
-	private String nome;
-	
+	@Column(nullable = false)
 	private String senha;
+	
+	@Column(nullable = false)
+	private String email;
+
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
 	public Long getId() {
 		return id;
@@ -80,7 +94,5 @@ public class Usuario implements UserDetails {
 	public boolean isEnabled() {
 		return true;
 	}
-	
-	
-	
+
 }

@@ -14,11 +14,10 @@ export class LoginComponent implements OnInit {
   formLogin: FormGroup;
   usuario: Usuario = new Usuario();
 
-
   constructor(
     private formB: FormBuilder,
     private userService: UsuarioService,
-    private router : Router
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -35,22 +34,21 @@ export class LoginComponent implements OnInit {
         next: (nomeUsuario) => {
           let params = new HttpParams().set("nome", this.formLogin.value.nome);
           this.userService.filtrarUsuario(params.toString()).subscribe({
-            next: (usuario) =>{
-              this.router.navigate(["/dashboard"]).then(()=>{
-                window.location.reload()
+            next: (usuario) => {
+              this.router.navigate(["/dashboard"]).then(() => {
+                window.location.reload();
               });
               localStorage.setItem("usuario", JSON.stringify(usuario));
-              this.usuario = JSON.parse(localStorage.getItem("usuario")!)
+              this.usuario = JSON.parse(localStorage.getItem("usuario")!);
             },
             error: (err) => console.log("senha errada"),
           });
         },
-        error: (err) => console.log("erro na permição"),
+        error: (err) => alert("Preencha todos os campos!"),
       });
   }
 
-  // 
-
-
-
+  
 }
+
+//

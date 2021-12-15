@@ -1,9 +1,9 @@
 .img-fundo {
   background-image: url("../../../assets/img-projeto-final/img-criar-conta.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  object-fit: contain;
-  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   height: 100vh;
 
   display: flex;
@@ -13,16 +13,15 @@
 
 .container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  flex: 0 1 auto;
 
+  background-color: rgba(252, 252, 252, 0.884);
   width: 30rem;
   height: 30rem;
 
-  background-color: rgba(255, 255, 255, 0.897);
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 .box-usuario {
@@ -60,26 +59,21 @@
 }
 
 .box-input input {
-  outline: 0;
-  border: none;
-  border-bottom: 1px solid rgb(161, 159, 159);
-
-  font-size: 1.2rem;
-
+  margin: 5px;
   background-color: transparent;
-  margin: 20px;
-  margin-top: 10px;
+  border: none;
+  border-bottom: 1px solid silver;
+  font-size: 1.4rem;
 }
 
 .box-botao input{
-    width: 200px;
+    width: 150px;
     height: 30px;
     margin: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     color: #fff ;
     background-color: #0073ae;
-    text-transform: uppercase;
-    font-size: 0.7rem;
+    font-size: 1rem;
     font-weight: 500;
 }
 .box-botao input:hover{

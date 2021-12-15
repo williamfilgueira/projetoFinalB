@@ -56,7 +56,7 @@ export class CriarProdutosComponent implements OnInit {
         alert("Produto cadastrado!");
         this.router.navigate(["/produtos"])
       },
-      error: (erro) => console.log("errouuu"),
+      error: (erro) =>alert("Preencha todos os campos"),
     });
   }
 }
